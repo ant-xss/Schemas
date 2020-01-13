@@ -1,0 +1,269 @@
+{
+    "brandFrom":{
+        "formKey":"LzfBrandForm",
+        "config":[
+            {
+                "label":"企业铭牌",
+                "style":{},
+                "list":[
+                    {
+                        "type":"radio",
+                        "dataKey":"gongsi_logo.hasBrand",
+                        "value":true,
+                        "leftText":"有无企业铭牌"
+                    },
+                    {
+                        "type":"image",
+                        "dataKey":"gongsi_logo.file_gongsi_logo",
+                        "parentKey":"gongsi_logo.hasBrand",
+                        "required":true,
+                        "leftText":"有无企业铭牌",
+                        "mode": "single"
+                    },
+                    {
+                        "type":"input",
+                        "dataKey":"gongsi_logo.remark",
+                        "parentKey":"gongsi_logo.hasBrand",
+                        "required":true,
+                        "leftText":"有无企业铭牌"
+                    }
+                ]
+            },
+            {
+                "label":"其他企业铭牌",
+                "style":{},
+                "list":[
+                    {
+                        "type":"radio",
+                        "dataKey":"otherGongsi_logo",
+                        "value":true,
+                        "leftText":"有无其他企业铭牌"
+                    },
+                    {
+                        "type":"input",
+                        "dataKey":"gs_name",
+                        "parentValue":true,
+                        "required":true,
+                        "leftText":"企业名称",
+                        "mode": "single"
+                    },
+                    {
+                        "type":"image",
+                        "dataKey":"file_otherGongsi_logo",
+                        "parentValue":false,
+                        "required":true,
+                        "leftText":"请上传企业铭牌"
+                    },
+                    {
+                        "type":"radio",
+                        "dataKey":"relation",
+                        "value":true,
+                        "required":true,
+                        "leftText":"关联企业"
+                    }
+                ]
+            }
+        ]
+    },
+    "cardVerifyForm":{
+        "formKey":"LzfCardVerifyForm",
+        "config":[
+            {
+                "label": "申请人身份证",
+                "list": [
+                  {
+                    "type": "image",
+                    "dataKey": "file_applier_idcard_front",
+                    "subKey": "applier_idcard_front_attachment_name",
+                    "leftText": "正面",
+                    "required":true,
+                    "mode": "single",
+                    "style": {}
+                  },
+                  {
+                    "type": "image",
+                    "dataKey": "file_applier_idcard_reverse",
+                    "subKey": "applier_idcard_reverse_attachment_name",
+                    "leftText": "反面",
+                    "required":true,
+                    "mode": "single",
+                    "style": {}
+                  }
+                ]
+              },
+              {
+                "label": "配偶身份证（可选）",
+                "list": [
+                  {
+                    "type": "image",
+                    "dataKey": "file_mate_idcard_front",
+                    "subKey": "mate_idcard_front_attachment_name",
+                    "leftText": "正面",
+                    "mode": "single",
+                    "style": {}
+                  },
+                  {
+                    "type": "image",
+                    "dataKey": "file_mate_idcard_reverse",
+                    "subKey": "mate_idcard_reverse_attachment_name",
+                    "leftText": "反面",
+                    "mode": "single",
+                    "style": {}
+                  }
+                ]
+              },
+              {
+                "label": "保证人身份证（可选）",
+                "list": [
+                  {
+                    "type": "image",
+                    "dataKey": "file_warrant_idcard_front",
+                    "subKey": "warrant_idcard_front_attachment_name",
+                    "leftText": "正面",
+                    "mode": "single",
+                    "style": {}
+                  },
+                  {
+                    "type": "image",
+                    "dataKey": "file_warrant_idcard_reverse",
+                    "subKey": "warrant_idcard_reverse_attachment_name",
+                    "leftText": "反面",
+                    "mode": "single",
+                    "style": {}
+                  }
+                ]
+              },
+              {
+                "label": "结婚证（可选）",
+                "list": [
+                  {
+                    "type": "icon",
+                    "icon": "image",
+                    "dataKey": "file_marriage_certificate",
+                    "subKey": "marriage_certificate_attachment_name",
+                    "mode": "single",
+                    "style": {}
+                  }
+                ]
+              },
+              {
+                "label": "申请人征信报告",
+                "list": [
+                  {
+                    "type": "icon",
+                    "icon": "image-plus",
+                    "dataKey": "file_applier_credit_reporting",
+                    "subKey": "applier_credit_reporting_attachment_name",
+                    "mode": "multiple",
+                    "validate": [
+                      "required"
+                    ],
+                    "style": {
+                      "flexDirection": "row",
+                      "alignItems": "center"
+                    }
+                  }
+                ]
+              },
+              {
+                "label": "配偶征信报告（可选）",
+                "list": [
+                  {
+                    "type": "icon",
+                    "icon": "image-plus",
+                    "dataKey": "file_mate_credit_reporting",
+                    "subKey": "mate_credit_reporting_attachment_name",
+                    "mode": "multiple",
+                    "style": {
+                      "flexDirection": "row",
+                      "alignItems": "center"
+                    }
+                  }
+                ]
+              },
+              {
+                "label": "企业征信报告（可选）",
+                "list": [
+                  {
+                    "type": "icon",
+                    "icon": "image-plus",
+                    "dataKey": "file_company_credit_reporting",
+                    "subKey": "company_credit_reporting_attachment_name",
+                    "mode": "multiple",
+                    "style": {
+                      "flexDirection": "row",
+                      "alignItems": "center"
+                    }
+                  }
+                ]
+              },
+              {
+                "label": "保证人征信报告（可选）",
+                "list": [
+                  {
+                    "type": "icon",
+                    "icon": "image-plus",
+                    "dataKey": "file_warrant_credit_reporting",
+                    "subKey": "warrant_credit_reporting_attachment_name",
+                    "mode": "multiple",
+                    "style": {
+                      "flexDirection": "row",
+                      "alignItems": "center"
+                    }
+                  }
+                ]
+              },
+              {
+                "label": "营业执照",
+                "list": [
+                  {
+                    "type": "icon",
+                    "icon": "image",
+                    "dataKey": "file_business_license",
+                    "subKey": "business_license_attachment_name",
+                    "mode": "single",
+                    "validate": [
+                      "required"
+                    ],
+                    "style": {
+                      "flexDirection": "row",
+                      "alignItems": "center"
+                    }
+                  }
+                ]
+              },
+              {
+                "label": "开户许可证（可选）",
+                "list": [
+                  {
+                    "type": "icon",
+                    "icon": "image",
+                    "dataKey": "file_opening_permit",
+                    "subKey": "opening_permit_attachment_name",
+                    "mode": "single",
+                    "style": {
+                      "flexDirection": "row",
+                      "alignItems": "center"
+                    }
+                  }
+                ]
+              },
+              {
+                "label": "食品行业经营许可证(可选)",
+                "list": [
+                  {
+                    "type": "icon",
+                    "icon": "image",
+                    "dataKey": "file_food_permit",
+                    "subKey": "food_permit_attachment_name",
+                    "mode": "single",
+                    "style": {
+                      "flexDirection": "row",
+                      "alignItems": "center"
+                    }
+                  }
+                ]
+              }
+            ]
+    }
+}
